@@ -47,7 +47,20 @@ public class ServerLoadBalancerTest {
         Server server = serverList.get(0);
         serverLoadBalancer.balance(serverList, vmList);
         assertEquals(server.getCurrentLoadPercentage(), 10.d);
+        assertTrue(server.contains(vmList.get(0)));
     }
+
+    @Test
+    void serverShouldBeFilledWhenItsHaveEnoughSapce(){
+        List<Server> serverList = serverListOfCapacities(2);
+        List<Vm> vmList = vmListOfSize(1,1);
+        Server server = serverList.get(0);
+        serverLoadBalancer.balance(serverList,vmList);
+        assertEquals(server.getCurrentLoadPercentage(), 100.d);
+        assertTrue(serverContainsTheaseVms(server,vmList));
+    }
+
+
 
     List<Server> serverListOfCapacities(int... capacity) {
         return Arrays.stream(capacity)
@@ -59,6 +72,13 @@ public class ServerLoadBalancerTest {
         return Arrays.stream(size)
                 .mapToObj(Vm::new)
                 .collect(Collectors.toList());
+    }
+
+    boolean serverContainsTheaseVms(Server server,List<Vm> vms){
+        long numberOfVms = vms.stream()
+                .filter(server::contains)
+                .count();
+        return  numberOfVms == vms.size();
     }
 
 }
