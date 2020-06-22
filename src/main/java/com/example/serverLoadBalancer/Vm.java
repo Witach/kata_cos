@@ -1,7 +1,12 @@
 package com.example.serverLoadBalancer;
 
 public class Vm {
-    public Vm(int i) {
+    private int size;
+    public Vm(int size) {
+        this.size = size;
+    }
 
+    public int getSize() {
+        return size;
     }
 }

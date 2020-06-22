@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc1e9cfc-3470-4cda-9752-b4fe426a5dd5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/serverLoadBalancer/Server.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/serverLoadBalancer/ServerLoadBalancer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/serverLoadBalancer/Vm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/serverLoadBalancer/ServerLoadBalancerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/serverLoadBalancer/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/serverLoadBalancer/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/serverLoadBalancer/ServerLoadBalancer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/serverLoadBalancer/ServerLoadBalancer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/serverLoadBalancer/Vm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/serverLoadBalancer/Vm.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +51,7 @@
       <recent name="com.example.serverLoadBalancer" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ServerLoadBalancerTest.shouldKeepServerEmptyWhenNoVms">
+  <component name="RunManager" selected="JUnit.ServerLoadBalancerTest.shouldFillServerWithOneSlotWithOneVm">
     <configuration name="ServerLoadBalancerTest.shouldFillServerIn10PercentWhenServerHas10SlotAndVmIsSize1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="kata_cos" />
       <extension name="coverage">
@@ -105,9 +102,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ServerLoadBalancerTest.shouldFillServerWithOneSlotWithOneVm" />
         <item itemvalue="JUnit.ServerLoadBalancerTest.shouldKeepServerEmptyWhenNoVms" />
         <item itemvalue="JUnit.ServerLoadBalancerTest.shouldFillServerIn10PercentWhenServerHas10SlotAndVmIsSize1" />
-        <item itemvalue="JUnit.ServerLoadBalancerTest.shouldFillServerWithOneSlotWithOneVm" />
       </list>
     </recent_temporary>
   </component>
@@ -121,45 +118,57 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1592828106603</updated>
-      <workItem from="1592828109713" duration="2258000" />
+      <workItem from="1592828109713" duration="2878000" />
     </task>
+    <task id="LOCAL-00001" summary="ServerLoadBalancerTest.shouldKeepServerEmptyWhenNoVms implemented">
+      <created>1592831097516</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1592831097516</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="ServerLoadBalancerTest.shouldKeepServerEmptyWhenNoVms implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="ServerLoadBalancerTest.shouldKeepServerEmptyWhenNoVms implemented" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Project_Structure" timestamp="1592828119238">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" key="#Project_Structure/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1592828119238" />
-    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1592831054642">
+    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1592831096322">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="114" key="CommitChangelistDialog2/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1592831054642" />
-    <state width="1877" height="183" key="GridCell.Tab.0.bottom" timestamp="1592831048416">
+    <state x="585" y="114" key="CommitChangelistDialog2/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1592831096322" />
+    <state width="1877" height="183" key="GridCell.Tab.0.bottom" timestamp="1592831786992">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="183" key="GridCell.Tab.0.bottom/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1592831048416" />
-    <state width="1877" height="183" key="GridCell.Tab.0.center" timestamp="1592831048416">
+    <state width="1877" height="183" key="GridCell.Tab.0.bottom/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1592831786992" />
+    <state width="1877" height="183" key="GridCell.Tab.0.center" timestamp="1592831786992">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="183" key="GridCell.Tab.0.center/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1592831048416" />
-    <state width="1877" height="183" key="GridCell.Tab.0.left" timestamp="1592831048416">
+    <state width="1877" height="183" key="GridCell.Tab.0.center/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1592831786992" />
+    <state width="1877" height="183" key="GridCell.Tab.0.left" timestamp="1592831786992">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="183" key="GridCell.Tab.0.left/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1592831048416" />
-    <state width="1877" height="183" key="GridCell.Tab.0.right" timestamp="1592831048416">
+    <state width="1877" height="183" key="GridCell.Tab.0.left/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1592831786992" />
+    <state width="1877" height="183" key="GridCell.Tab.0.right" timestamp="1592831786992">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="183" key="GridCell.Tab.0.right/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1592831048416" />
+    <state width="1877" height="183" key="GridCell.Tab.0.right/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1592831786992" />
     <state x="440" y="94" key="SettingsEditor" timestamp="1592828905031">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="94" key="SettingsEditor/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1592828905031" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1592831063372">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1592831791528">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1592831063372" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1592831791528" />
   </component>
 </project>
