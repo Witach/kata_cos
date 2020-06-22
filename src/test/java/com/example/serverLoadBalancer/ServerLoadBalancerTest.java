@@ -4,12 +4,9 @@ package com.example.serverLoadBalancer;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -60,6 +57,18 @@ public class ServerLoadBalancerTest {
         assertTrue(serverContainsTheaseVms(server,vmList));
     }
 
+    @Test
+    void vmShouldBePutInLessLoadedServer(){
+        Server firstServer  = server().withcapacity(100).withCurrentLoad(45.d).build();
+        Server secondServer = server().withcapacity(100).withCurrentLoad(40.d).build();
+        List<Vm> vmList = vmListOfSize(10);
+        serverLoadBalancer.balance(List.of(firstServer,secondServer), vmList);
+        assertTrue(secondServer.contains(vmList.get(0)));
+    }
+
+    private ServerBiudler server() {
+        return new ServerBiudler();
+    }
 
 
     List<Server> serverListOfCapacities(int... capacity) {

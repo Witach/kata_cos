@@ -12,6 +12,12 @@ public class Server {
         this.capacity = capacity;
     }
 
+    public Server(int capacity, double currentLoad) {
+        this.capacity = capacity;
+        this.currentLoadPercentage = currentLoad;
+    }
+
+
     public double getCurrentLoadPercentage() {
         return currentLoadPercentage;
     }

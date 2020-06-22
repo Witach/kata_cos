@@ -16,7 +16,11 @@ public class ServerLoadBalancer {
 
     private Server getApropiateServer(List<Server> servers){
         return  servers.stream()
-                .findFirst()
+                .min(this::compereCurrentLoadOfServers)
                 .orElseThrow();
+    }
+
+    private int compereCurrentLoadOfServers(Server first, Server second){
+        return Double.compare(first.getCurrentLoadPercentage(),second.getCurrentLoadPercentage());
     }
 }
