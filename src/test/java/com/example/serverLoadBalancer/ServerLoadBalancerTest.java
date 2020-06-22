@@ -42,10 +42,10 @@ public class ServerLoadBalancerTest {
 
     @Test
     void shouldFillServerIn10PercentWhenServerHas10SlotAndVmIsSize1() {
-        Server server = new Server(10);
-        List<Server> serverLsit = List.of(server);
-        List<Vm> vmList = List.of(new Vm(1));
-        serverLoadBalancer.balance(serverLsit, vmList);
+        List<Server> serverList = serverListOfCapacities(10);
+        List<Vm> vmList = vmListOfSize(1);
+        Server server = serverList.get(0);
+        serverLoadBalancer.balance(serverList, vmList);
         assertEquals(server.getCurrentLoadPercentage(), 10.d);
     }
 
