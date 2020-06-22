@@ -31,6 +31,7 @@ public class Server {
         currentLoadPercentage = (double) sumVmSizes() / (double) capacity * 100.d;
     }
 
+
     private int sumVmSizes(){
         return  vmList.stream()
                 .mapToInt(Vm::getSize)
@@ -39,5 +40,17 @@ public class Server {
 
     public boolean contains(Vm vm) {
         return vmList.contains(vm);
+    }
+
+    private double loadOfVm(Vm vm){
+        return  (double) (sumVmSizes() + vm.getSize())/ (double) capacity * 100.d;
+    }
+
+    public boolean canFit(Vm vm){
+        return loadOfVm(vm) <= 100.d;
+    }
+
+    public int getCapacity() {
+        return capacity;
     }
 }

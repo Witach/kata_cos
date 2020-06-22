@@ -8,8 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class ServerLoadBalancerTest {
     ServerLoadBalancer serverLoadBalancer;
@@ -65,6 +64,16 @@ public class ServerLoadBalancerTest {
         serverLoadBalancer.balance(List.of(firstServer,secondServer), vmList);
         assertTrue(secondServer.contains(vmList.get(0)));
     }
+
+    @Test
+    void vmShouldNotBeContainedWhenNotEnoughSpace(){
+        Server firstServer = server().withcapacity(10).withCurrentLoad(90.d).build();
+        List<Vm> vmList = vmListOfSize(2);
+        serverLoadBalancer.balance(List.of(firstServer),vmList);
+        assertFalse(firstServer.contains(vmList.get(0)));
+    }
+
+
 
     private ServerBiudler server() {
         return new ServerBiudler();

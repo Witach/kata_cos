@@ -1,5 +1,7 @@
 package com.example.serverLoadBalancer;
 
+import com.sun.source.tree.BreakTree;
+
 public class ServerBiudler {
 
     double currentLoad = 0;
@@ -15,7 +17,17 @@ public class ServerBiudler {
         return this;
     }
 
+    private void initialLoad(Server server){
+        if (currentLoad > 0) {
+            int expectedLoad = (int) (currentLoad / 100.d * (double) server
+                    .getCapacity());
+            server.addVm(new Vm(expectedLoad));
+        }
+    }
+
     public Server build(){
-        return  new Server(capacity, currentLoad);
+        Server server = new Server(capacity);
+        initialLoad(server);
+        return server;
     }
 }
